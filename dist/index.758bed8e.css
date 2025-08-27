@@ -4,7 +4,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #1e0555;
+  background-color: #dedede;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -18,9 +18,10 @@ body, .quote-input {
 .container {
   width: 700px;
   max-width: 90%;
-  background-color: #f0db4f;
+  background-color: #73977f;
   border-radius: .5rem;
   padding: 1rem;
+  border-color: 1 rem #1d6d38;
 }
 
 .timer {
