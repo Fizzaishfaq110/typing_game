@@ -8,7 +8,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #e524f7;
+  background-color: #1e0555;
 }
 
 body,
@@ -16,8 +16,9 @@ body,
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-  background-color: #07b3aa;
+.container,
+h3 {
+  background-color: #f0db4f;
   padding: 1rem;
   border-radius: 0.5rem;
   width: 700px;
@@ -28,12 +29,11 @@ body,
   position: absolute;
   left: 10rem;
   font-size: 3rem;
-  color: #f0db4f;
+  color: #f04fd5;
   font-weight: bold;
 }
 
-.quote-display,
-h3 {
+.quote-display {
   margin-bottom: 1rem;
   margin-left: calc(1rem + 2px);
   margin-right: calc(1rem + 2px);
