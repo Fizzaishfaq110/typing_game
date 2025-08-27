@@ -4,7 +4,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #1e0555;
+  background-color: #055506;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -28,7 +28,7 @@ body, .quote-input {
   font-size: 3rem;
   font-weight: bold;
   position: absolute;
-  top: 2rem;
+  top: .5rem;
 }
 
 .quote-display {
@@ -59,7 +59,7 @@ body, .quote-input {
 }
 
 .incorrect {
-  color: red;
+  color: #00c8ff;
   text-decoration: underline;
 }
 
