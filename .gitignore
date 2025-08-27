@@ -28,4 +28,4 @@ dist
 =======
 yarn-error.log*dist/
 .parcel-cache/
->>>>>>> 215854b (Ignore build and cache files)
+dist
