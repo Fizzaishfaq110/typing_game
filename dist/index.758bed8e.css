@@ -24,11 +24,11 @@ body, .quote-input {
 }
 
 .timer {
-  color: #f0db4f;
+  color: #f0824f;
   font-size: 3rem;
   font-weight: bold;
   position: absolute;
-  top: .5rem;
+  left: 10rem;
 }
 
 .quote-display {

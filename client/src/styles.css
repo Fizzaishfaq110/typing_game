@@ -26,9 +26,9 @@ body,
 
 .timer {
   position: absolute;
-  top: 0.5rem;
+  left: 10rem;
   font-size: 3rem;
-  color: #f0db4f;
+  color: #f0824f;
   font-weight: bold;
 }
 
