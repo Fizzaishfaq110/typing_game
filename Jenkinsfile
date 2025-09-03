@@ -1,31 +1,28 @@
 pipeline {
   agent any
 
-   tools {nodejs "node"}
-
   stages {
-    stage ("build") {
+    stage('Build') {
       steps {
-        echo "building my app..."
-         npm install
+        echo 'Installing dependencies...'
+        sh 'npm install'   // Run npm install to get all packages
       }
     }
-    stage ("test") {
-       steps {
-        sh "pwd"
-          dir('client') {
-              sh "pwd"
-              sh 'npm install'
-              sh 'npm test'
-              }
-        echo "testing my app..."
-       }
+
+    stage('Test') {
+      steps {
+        echo 'Running tests...'
+        // sh 'npm test'
+      }
     }
-    stage ("deploy") {
-    steps {
-        echo "deploying my app..."
-       }
+
+    stage('Deploy') {
+      steps {
+        echo 'Deploying application...'
+        echo 'Deployment step - add your deploy commands here!'
+      }
     }
   }
+}
 
 }
