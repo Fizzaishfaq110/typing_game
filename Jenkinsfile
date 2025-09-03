@@ -1,5 +1,8 @@
 pipeline {
   agent any
+
+   tools {nodejs "node"}
+
   stages {
     stage ("build") {
       steps {
@@ -9,6 +12,12 @@ pipeline {
     }
     stage ("test") {
        steps {
+        sh "pwd"
+          dir('client') {
+              sh "pwd"
+              sh 'npm install'
+              sh 'npm test'
+              }
         echo "testing my app..."
        }
     }
