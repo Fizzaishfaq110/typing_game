@@ -1,22 +1,52 @@
 pipeline {
+ 
   agent any
+ 
   stages {
-    stage ("build") {
+ 
+    stage('Checkout') {
+ 
       steps {
-        echo "building my app..."
-         npm install
+ 
+        git url: 'https://github.com/Fizzaishfaq110/typing_game.git', branch: 'main'
+ 
       }
+ 
     }
-    stage ("test") {
-       steps {
-        echo "testing my app..."
-       }
+ 
+    stage('Build') {
+ 
+      steps {
+ 
+        echo 'Building...'
+ 
+        
+      }
+ 
     }
-    stage ("deploy") {
-    steps {
-        echo "deploying my app..."
-       }
+ 
+    stage('Test') {
+ 
+      steps {
+ 
+        echo 'Running tests...'
+ 
+ 
+      }
+ 
     }
+ 
+    stage('Deploy') {
+ 
+      steps {
+ 
+        echo 'Deploying...'
+ 
+ 
+      }
+ 
+    }
+ 
   }
-
+ 
 }
