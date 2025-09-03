@@ -2,32 +2,44 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #1E0555;
+  background-color: #1e0555;
+} */
+
+body {
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+  align-items: center; /* center horizontally */
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e0555;
 }
 
-body, .quote-input {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body,
+.quote-input {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .container {
-  background-color: #F0DB4F;
+  position: absolute;
+  top: 12rem;
+  background-color: #f0db4f;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 700px;
   max-width: 90%;
 }
 
 .timer {
   position: absolute;
-  top: 2rem;
+  top: 7rem;
   font-size: 3rem;
-  color: #F0DB4F;
+  color: #f0db4f;
   font-weight: bold;
 }
 
@@ -39,15 +51,15 @@ body, .quote-input {
 
 .quote-input {
   background-color: transparent;
-  border: 2px solid #A1922E;
+  border: 2px solid #a1922e;
   outline: none;
   width: 100%;
   height: 8rem;
   margin: auto;
   resize: none;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .quote-input:focus {
@@ -61,4 +73,15 @@ body, .quote-input {
 .incorrect {
   color: red;
   text-decoration: underline;
+}
+
+#title {
+  padding-top: 2rem;
+  font-size: 3rem; /* big and bold */
+  font-weight: 650;
+  color: #f0db4f; /* matching your container color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* subtle shadow for contrast */
+  margin: 0; /* remove default h1 margin */
 }
