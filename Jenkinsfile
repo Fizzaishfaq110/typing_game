@@ -20,7 +20,8 @@ pipeline {
  
         echo 'Building...'
  
-        
+        // Example: sh 'mvn clean compile' or 'npm install'
+ 
       }
  
     }
@@ -31,6 +32,7 @@ pipeline {
  
         echo 'Running tests...'
  
+        // Example: sh 'mvn test' or 'npm test'
  
       }
  
@@ -42,6 +44,7 @@ pipeline {
  
         echo 'Deploying...'
  
+        // Example: sh './deploy.sh'
  
       }
  
