@@ -32,10 +32,15 @@
 
 
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:20-bullseye'   // Node.js + Python + build tools included
+            args '-u root'             // run as root so npm can install dependencies
+        }
+    }
 
-    tools {
-        nodejs "node"   // Jenkins NodeJS installation (configured in Manage Jenkins > Global Tool Configuration)
+    environment {
+        NODE_OPTIONS = "--max-old-space-size=4096"  // optional, increase Node memory if needed
     }
 
     stages {
@@ -57,18 +62,16 @@ pipeline {
             steps {
                 echo "🏗️ Building client app..."
                 sh 'npm run build --prefix client'
-                // The --prefix option tells npm to run the script inside client/
-                // This assumes client/package.json has a "build" script (common for React/Vue apps)
             }
         }
 
         stage('Deploy') {
             when {
-                branch 'main'   // only deploy from the main branch
+                branch 'main'   // only deploy from main branch
             }
             steps {
                 echo "🚀 Deploying application to AWS from branch: ${env.BRANCH_NAME}"
-                // Example deployment steps:
+                // Example deployment commands:
                 // sh 'aws s3 sync client/build/ s3://my-bucket-name'
                 echo "✅ Deployment complete!"
             }
