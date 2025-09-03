@@ -4,7 +4,7 @@
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: column;
   align-items: center;
   min-height: 100vh;
   margin: 0;
@@ -23,6 +23,11 @@ h3 {
   border-radius: 0.5rem;
   width: 700px;
   max-width: 90%;
+}
+
+.container {
+  position: absolute;
+  top: 12rem;
 }
 
 .timer {
@@ -63,4 +68,15 @@ h3 {
 .incorrect {
   color: rgb(157, 255, 0);
   text-decoration: underline;
+}
+
+#title {
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-weight: 650;
+  color: #f0db4f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
