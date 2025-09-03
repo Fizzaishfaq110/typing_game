@@ -1,31 +1,55 @@
 pipeline {
+
   agent any
 
-   tools {nodejs "node"}
-
   stages {
-    stage ("build") {
+
+    stage('Checkout') {
+
       steps {
-        echo "building my app..."
-         npm install
+
+        git url: 'https://github.com/Fizzaishfaq110/typing_game.git', branch: 'main'
+
       }
+
     }
-    stage ("test") {
-       steps {
-        sh "pwd"
-          dir('client') {
-              sh "pwd"
-              sh 'npm install'
-              sh 'npm test'
-              }
-        echo "testing my app..."
-       }
+
+    stage('Build') {
+
+      steps {
+
+        echo 'Building...'
+
+        // Example: sh 'mvn clean compile' or 'npm install'
+
+      }
+
     }
-    stage ("deploy") {
-    steps {
-        echo "deploying my app..."
-       }
+
+    stage('Test') {
+
+      steps {
+
+        echo 'Running tests...'
+
+        // Example: sh 'mvn test' or 'npm test'
+
+      }
+
+    }
+
+    stage('Deploy') {
+
+      steps {
+
+        echo 'Deploying...'
+
+        // Example: sh './deploy.sh'
+
+      }
+
     }
   }
 
 }
+ 
