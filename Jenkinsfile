@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Installing dependencies...'
-        sh 'npm install'   // Run npm install to get all packages
+        sh 'npm install'
       }
     }
 
@@ -19,10 +19,8 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying application...'
-        echo 'Deployment step - add your deploy commands here!'
+        echo 'Add your deploy commands here'
       }
     }
   }
-}
-
 }
